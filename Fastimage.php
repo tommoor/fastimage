@@ -6,10 +6,11 @@ class Fastimage
 	private $str;
 	private $uri;
 	private $type;
-
+	private $handle;
+	
 	public function __construct($uri)
 	{
-		$this->open($uri);
+		if ($uri) $this->open($uri);
 	}
 
 
@@ -173,6 +174,8 @@ class Fastimage
 
 	private function getChars($n)
 	{
+		$response = null;
+		
 		// do we need more data?		
 		if ($this->strpos + $n -1 >= strlen($this->str))
 		{
