@@ -8,10 +8,12 @@ echo "\n\n";
 
 $time = microtime(true);
 $image = new FastImage($uri);
-$size = $image->getSize();
-echo "Width: ". $size[0] . "px Height: ". $size[1] . "px in " . (microtime(true)-$time) . " seconds \n";
+list($width, $height) = $image->getSize();
+echo "FastImage: \n";
+echo "Width: ". $width . "px Height: ". $height . "px in " . (microtime(true)-$time) . " seconds \n";
 
 $time = microtime(true);
-$size = getimagesize($uri);
-echo "Width: ". $size[0] . "px Height: ". $size[1] . "px in " . (microtime(true)-$time) . " seconds \n";
+list($width, $height) = getimagesize($uri);
+echo "getimagesize: \n";
+echo "Width: ". $width . "px Height: ". $height . "px in " . (microtime(true)-$time) . " seconds \n";
 exit;
