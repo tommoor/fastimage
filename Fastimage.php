@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * FastImage - Because sometimes you just want the size!
+ * Based on the Ruby Implementation by Steven Sykes (https://github.com/sdsykes/fastimage)
+ *
+ * Copyright (c) 2012 Tom Moor
+ * Tom Moor, http://tommoor.com
+ *
+ * MIT Licensed
+ * @version 0.1
+ */
+
 class Fastimage
 {
 	private $strpos = 0;
@@ -218,7 +229,7 @@ class Fastimage
 	{
 		$size = unpack("C*", $str);
 		
-	    return ($size[1] << 8) + $size[2];
+	    	return ($size[1] << 8) + $size[2];
 	}
 
 
