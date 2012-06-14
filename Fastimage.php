@@ -21,11 +21,11 @@ class FastImage
 	
 	public function __construct($uri)
 	{
-		if ($uri) $this->open($uri);
+		if ($uri) $this->load($uri);
 	}
 
 
-	public function open($uri)
+	public function load($uri)
 	{
 		if ($this->handle) $this->close();
 		
