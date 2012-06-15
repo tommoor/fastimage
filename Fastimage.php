@@ -19,7 +19,7 @@ class FastImage
 	private $type;
 	private $handle;
 	
-	public function __construct($uri)
+	public function __construct($uri = null)
 	{
 		if ($uri) $this->load($uri);
 	}
@@ -36,7 +36,7 @@ class FastImage
 
 	public function close()
 	{
-		fclose($this->handle);
+		if ($this->handle) fclose($this->handle);
 	}
 
 
