@@ -4,24 +4,24 @@ FastImage finds the dimensions or filetype of a remote image file given its uri 
 
 
 ## Usage
-
-		<?php 
+```php
+<?php 
 		
-		require 'Fastimage.php';
+require 'Fastimage.php';
 		
-		$uri = "http://farm9.staticflickr.com/8151/7357346052_54b8944f23_b.jpg";
+$uri = "http://farm9.staticflickr.com/8151/7357346052_54b8944f23_b.jpg";
 		
-		// loading image into constructor
-		$image = new FastImage($uri);
-		list($width, $height) = $image->getSize();
-		echo "dimensions: " . $width . "x" . $height;
+// loading image into constructor
+$image = new FastImage($uri);
+list($width, $height) = $image->getSize();
+echo "dimensions: " . $width . "x" . $height;
 
-		// or, create an instance and use the 'load' method
-		$image = new FastImage();
-		$image->load($uri);
-		$type $image->getType();
-		echo "filetype: " . $type;
-
+// or, create an instance and use the 'load' method
+$image = new FastImage();
+$image->load($uri);
+$type $image->getType();
+echo "filetype: " . $type;
+```
 
 ## References
 
