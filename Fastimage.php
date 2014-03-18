@@ -211,8 +211,7 @@ class FastImage
 		$result = substr($this->str, $this->strpos, $n);
 		$this->strpos += $n;
 		
-		// we are dealing with bytes here, so force the encoding
-		return mb_convert_encoding($result, "8BIT");
+		return $result;
 	}
 
 
