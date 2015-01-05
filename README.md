@@ -19,7 +19,7 @@ echo "dimensions: " . $width . "x" . $height;
 // or, create an instance and use the 'load' method
 $image = new FastImage();
 $image->load($uri);
-$type $image->getType();
+$type = $image->getType();
 echo "filetype: " . $type;
 ```
 
