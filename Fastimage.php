@@ -36,7 +36,13 @@ class FastImage
 
 	public function close()
 	{
-		if ($this->handle) fclose($this->handle);
+		if ($this->handle)
+		{
+			fclose($this->handle);
+			$this->handle = null;
+			$this->type = null;
+			$this->str = null;
+		}
 	}
 
 
@@ -229,7 +235,7 @@ class FastImage
 	{
 		$size = unpack("C*", $str);
 		
-	    	return ($size[1] << 8) + $size[2];
+		return ($size[1] << 8) + $size[2];
 	}
 
 
