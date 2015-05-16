@@ -15,7 +15,6 @@ class FastImage
 {
 	private $strpos = 0;
 	private $str;
-	private $uri;
 	private $type;
 	private $handle;
 	
@@ -29,7 +28,6 @@ class FastImage
 	{
 		if ($this->handle) $this->close();
 		
-		$this->uri = $uri;
 		$this->handle = fopen($uri, 'r');
 	}
 
